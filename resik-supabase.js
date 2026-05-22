@@ -41,6 +41,7 @@ window.RESIK_AUTH = {
 
   async register({ email, password, firstName, lastName, role, organization }) {
     const sb = await getSupabase();
+
     const { data, error } = await sb.auth.signUp({
       email,
       password,
@@ -48,29 +49,19 @@ window.RESIK_AUTH = {
         data: {
           first_name: firstName,
           last_name: lastName || '',
-          role: role,
+          role: role || 'buyer',
           organization: organization || null,
         }
       }
     });
+
     if (error) throw error;
 
-    // Simpan profil ke tabel profiles jika sign up berhasil
-    if (data.user) {
-      const { error: profileError } = await sb.from('profiles').upsert({
-        id: data.user.id,
-        first_name: firstName,
-        last_name: lastName || '',
-        email: email,
-        role: role,
-        organization: organization || null,
-        created_at: new Date().toISOString()
-      });
-      if (profileError) console.warn('Profile insert warning:', profileError.message);
-    }
+    // Profile otomatis dibuat oleh trigger Supabase
+    // Tidak perlu insert manual ke table profiles
 
     return data;
-  },
+  }
 
   async loginWithGoogle() {
     const sb = await getSupabase();

@@ -41,6 +41,7 @@ window.RESIK_AUTH = {
 
   async register({ email, password, firstName, lastName, role, organization }) {
     const sb = await getSupabase();
+
     const { data, error } = await sb.auth.signUp({
       email,
       password,
@@ -48,12 +49,19 @@ window.RESIK_AUTH = {
         data: {
           first_name: firstName,
           last_name: lastName || '',
-          role: role,
+          role: role || 'buyer',
           organization: organization || null,
         }
       }
     });
+
     if (error) throw error;
+
+    // Profile otomatis dibuat oleh trigger Supabase
+    // Tidak perlu insert manual ke table profiles
+
+    return data;
+  }
 
     // Simpan profil ke tabel profiles jika sign up berhasil
     if (data.user) {
