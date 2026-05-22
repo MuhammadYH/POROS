@@ -82,6 +82,14 @@ async function registerUser({ email, password, firstName, lastName = '', role, o
 
   const sb = await _getClient();
 
+  console.log('REGISTER DEBUG:', {
+    email,
+    firstName,
+    lastName,
+    role,
+    organization
+  });
+
   // ── Daftar ke Supabase Auth ──
   const { data: authData, error: authError } = await sb.auth.signUp({
     email,
