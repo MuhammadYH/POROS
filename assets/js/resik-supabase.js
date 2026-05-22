@@ -61,7 +61,7 @@ window.RESIK_AUTH = {
     // Tidak perlu insert manual ke table profiles
 
     return data;
-  }
+  },
 
   async loginWithGoogle() {
     const sb = await getSupabase();
