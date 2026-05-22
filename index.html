@@ -63,145 +63,219 @@
 </div>
 
 <!-- ══════════════════════════════════
-     HERO
+     HERO (POROS-style)
 ═══════════════════════════════════ -->
-<section class="hero">
-  <div class="container hero-grid">
+<section class="hero-poros">
+  <div class="hero-poros-inner">
 
-    <div>
-      <div class="hero-pill anim d1">
-        <div class="hero-pill-dot">
-          <svg viewBox="0 0 16 16"><path d="M8 3v5l3 2"/><circle cx="8" cy="8" r="6"/></svg>
-        </div>
-        Circular Food Waste Ecosystem — Pacet, Mojokerto
-      </div>
-
-      <h1 class="anim d2">
-        Ubah Limbah<br>Makanan Jadi<br><span class="hl">Sumber Daya</span>
+    <!-- Kiri: teks -->
+    <div class="hero-poros-left" style="display:flex;flex-direction:column;justify-content:center;">
+      <h1 class="hero-poros-title">
+        Sistem Pengelolaan<br>Limbah Terpadu untuk<br>
+        <span class="hero-poros-hl">Pondok Pesantren</span>
       </h1>
-
-      <p class="anim d3">
+      <p class="hero-poros-desc">
         RESIK menghubungkan hotel, restoran, dan kawasan wisata dengan pengolah limbah organik melalui Smart Bin IoT dan marketplace ekonomi sirkular terintegrasi.
       </p>
-
-      <div class="hero-actions anim d4">
-        <a href="#cara-kerja" class="btn-primary">
-          Lihat Cara Kerja
-          <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
-        </a>
-        <a href="kontak.html" class="btn-ghost">
-          Jadwalkan Demo
-          <svg viewBox="0 0 16 16"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+      <div class="hero-poros-actions">
+        <a href="kontak.html" class="hpa-btn-solid">Coba Gratis</a>
+        <a href="#cara-kerja" class="hpa-btn-outline">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/></svg>
+          Lihat Demo
         </a>
       </div>
-
-      <div class="hero-tags-strip anim d4">
-        <span class="hero-tag-chip">
-          <svg viewBox="0 0 12 12"><circle cx="6" cy="6" r="4"/><path d="M6 4v2l1.5 1.5"/></svg>
-          Pemantauan Real-Time
-        </span>
-        <span class="hero-tag-chip">
-          <svg viewBox="0 0 12 12"><path d="M2 10L5 7l2 2 3-5"/></svg>
-          Data Terukur & Akurat
-        </span>
-        <span class="hero-tag-chip">
-          <svg viewBox="0 0 12 12"><path d="M6 2v3M6 10V7M2 6h3M10 6H7"/></svg>
-          Pengolahan Berkelanjutan
-        </span>
+      <div class="hero-poros-badge">
+        <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 8 5 12 15 4"/></svg>
+        Dirancang khusus untuk kawasan pondok pesantren
       </div>
     </div>
 
-    <!-- Phone Mockup Visual -->
-    <div class="hero-visual anim d3">
-      <div class="hero-phone-wrap">
-        <div class="app-bar">
-          <div class="app-bar-left">
-            <div class="app-bar-title">Dashboard RESIK</div>
-            <div class="app-bar-brand">Smart Bin Monitor</div>
-          </div>
-          <div class="app-bar-stat">
-            <strong id="stat-efisiensi">78%</strong>
-            <span>Efisiensi Hari Ini</span>
-          </div>
-        </div>
-        <div class="app-body">
-          <div class="app-section-label">Status Smart Bin</div>
-          <div class="bin-list">
-            <div class="bin-row">
-              <div class="bin-icon" style="background:#fef3e2">
-                <svg viewBox="0 0 24 24" style="stroke:#e67e22"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
-              </div>
-              <div class="bin-info">
-                <div class="bin-name" id="bin-name-0">Restoran Pacet Indah</div>
-                <div class="bin-loc" id="bin-loc-0">100L — Outdoor</div>
-              </div>
-              <div class="bin-fill">
-                <div class="bin-pct" id="bin-pct-0" style="color:#e67e22">87%</div>
-                <div class="fill-bar-wrap"><div class="fill-bar" id="bin-bar-0" style="width:87%;background:#e67e22"></div></div>
-              </div>
-            </div>
-            <div class="bin-row">
-              <div class="bin-icon" style="background:#e8f5ee">
-                <svg viewBox="0 0 24 24" style="stroke:#1b4d35"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
-              </div>
-              <div class="bin-info">
-                <div class="bin-name" id="bin-name-1">Hotel Villa Pacet</div>
-                <div class="bin-loc" id="bin-loc-1">80L — Indoor</div>
-              </div>
-              <div class="bin-fill">
-                <div class="bin-pct" style="color:#1b4d35">42%</div>
-                <div class="fill-bar-wrap"><div class="fill-bar" style="width:42%;background:#3db870"></div></div>
-              </div>
-            </div>
-            <div class="bin-row">
-              <div class="bin-icon" style="background:#e8f5ee">
-                <svg viewBox="0 0 24 24" style="stroke:#1b4d35"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
-              </div>
-              <div class="bin-info">
-                <div class="bin-name" id="bin-name-2">Pujasera Tahura</div>
-                <div class="bin-loc" id="bin-loc-2">40L — Indoor</div>
-              </div>
-              <div class="bin-fill">
-                <div class="bin-pct" style="color:#1b4d35">28%</div>
-                <div class="fill-bar-wrap"><div class="fill-bar" style="width:28%;background:#3db870"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="app-section-label">Ringkasan Bulan Ini</div>
-          <div class="app-stats">
-            <div class="app-stat">
-              <strong id="stat-limbah">1.24 ton</strong>
-              <span>Limbah Terolah</span>
-            </div>
-            <div class="app-stat">
-              <strong id="stat-nilai">Rp 8.4jt</strong>
-              <span>Nilai Produk</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Floating cards -->
-      <div class="float-card float-card-alert">
-        <div class="fc-head">
-          <div class="fc-dot"></div>
-          <div class="fc-title">Notifikasi Otomatis</div>
-        </div>
-        <div class="fc-body">Bin 60L di Restoran Pacet Indah hampir penuh. Penjemputan dijadwalkan.</div>
-        <div class="fc-tag">Waste Manager Dikirim →</div>
-      </div>
-
-      <div class="float-card float-card-eco">
-        <div class="eco-circle">
-          <svg viewBox="0 0 24 24"><path d="M12 22C6 22 2 18 2 12C2 6 6 2 12 2"/><path d="M12 2C18 2 22 6 22 12C22 15 20 18 17 20"/><path d="M8 12C8 9.8 9.8 8 12 8"/></svg>
-        </div>
-        <div class="eco-num" id="stat-emisi">22%</div>
-        <div class="eco-label">↓ Emisi Carbon</div>
-      </div>
+    <!-- Kanan: gambar utama -->
+    <div class="hero-poros-right">
+      <img src="hero-bg.jpg" alt="RESIK Smart Bin" class="hero-poros-img">
     </div>
 
   </div>
+
+  <!-- Feature cards bawah -->
+  <div class="hero-poros-cards">
+    <div class="hpc-card">
+      <div class="hpc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <div>
+        <div class="hpc-title">Manajemen Mitra</div>
+        <div class="hpc-desc">Kelola data hotel, restoran, dan mitra pengolah dalam satu platform.</div>
+      </div>
+    </div>
+    <div class="hpc-card">
+      <div class="hpc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div>
+        <div class="hpc-title">Monitoring IoT</div>
+        <div class="hpc-desc">Pantau kapasitas Smart Bin secara real-time dan jadwalkan penjemputan otomatis.</div>
+      </div>
+    </div>
+    <div class="hpc-card">
+      <div class="hpc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      </div>
+      <div>
+        <div class="hpc-title">Keuangan &amp; Transaksi</div>
+        <div class="hpc-desc">Catat pemasukan dari penjualan produk daur ulang secara transparan.</div>
+      </div>
+    </div>
+    <div class="hpc-card">
+      <div class="hpc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <div>
+        <div class="hpc-title">Laporan Dampak</div>
+        <div class="hpc-desc">Hasilkan laporan emisi karbon dan nilai ekonomi sirkular yang akurat.</div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+/* ── HERO POROS ── */
+.hero-poros {
+  position: relative;
+  background: #fff;
+  padding-top: 80px;
+  overflow: hidden;
+}
+.hero-poros::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.hero-poros::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #fff 42%, rgba(255,255,255,0.75) 62%, rgba(255,255,255,0.1) 100%);
+  z-index: 1;
+}
+.hero-poros-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 32px 80px;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.hero-poros-left {
+  max-width: 560px;
+}
+.hero-poros-title {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #111;
+  margin: 0 0 18px;
+}
+.hero-poros-hl { color: #1b8a4e; }
+.hero-poros-desc {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.65;
+  margin: 0 0 28px;
+  max-width: 480px;
+}
+.hero-poros-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.hpa-btn-solid {
+  background: #1b8a4e;
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: .95rem;
+  text-decoration: none;
+  transition: background .2s;
+}
+.hpa-btn-solid:hover { background: #146e3e; }
+.hpa-btn-outline {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 2px solid #1b8a4e;
+  color: #1b8a4e;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: .95rem;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+}
+.hpa-btn-outline:hover { background: #eaf7f0; }
+.hero-poros-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .85rem;
+  color: #1b8a4e;
+  font-weight: 500;
+}
+.hero-poros-right { display: none; }
+.hero-poros-img { display: none; }
+.hero-poros-cards {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px 48px;
+}
+.hpc-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 22px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+  transition: box-shadow .2s;
+}
+.hpc-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.10); }
+.hpc-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background: #1b8a4e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hpc-icon svg { width: 20px; height: 20px; stroke: #fff; }
+.hpc-title { font-weight: 700; font-size: .95rem; color: #111; margin-bottom: 5px; }
+.hpc-desc { font-size: .82rem; color: #666; line-height: 1.5; }
+@media (max-width: 900px) {
+  .hero-poros-inner { padding: 80px 20px 60px; }
+  .hero-poros::after { background: linear-gradient(to right, rgba(255,255,255,0.95) 55%, rgba(255,255,255,0.5) 100%); }
+  .hero-poros-cards { grid-template-columns: repeat(2, 1fr); padding: 0 20px 36px; }
+}
+@media (max-width: 520px) {
+  .hero-poros-cards { grid-template-columns: 1fr; }
+}
+</style>
 
 <!-- ══════════════════════════════════
      STATS
