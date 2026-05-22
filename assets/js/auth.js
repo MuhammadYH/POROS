@@ -106,12 +106,26 @@ async function registerUser({ email, password, firstName, lastName = '', role, o
 
   if (authError) throw authError;
 
-  const user = authData.user;
-  if (!user) throw new Error('Registrasi gagal: user tidak terbuat.');
+  const profilePayload = {
+    id           : user.id,
+    email        : email,
+    first_name   : firstName,
+    last_name    : lastName,
+    role         : role,
+    organization : organization,
+    avatar_url   : null,
+    is_active    : true,
+    created_at   : new Date().toISOString(),
+    updated_at   : new Date().toISOString(),
+  };
 
-  // ── Simpan profil ke tabel profiles ──
-  // Profile otomatis dibuat oleh trigger Supabase
-  const profile = await getProfile(user.id);
+  const { data: profile, error: profileError } = await sb
+    .from('profiles')
+    .insert(profilePayload)
+    .select()
+    .single();
+
+  if (profileError) throw profileError;
 
   return { user, profile };
 }
