@@ -63,23 +63,6 @@ window.RESIK_AUTH = {
     return data;
   }
 
-    // Simpan profil ke tabel profiles jika sign up berhasil
-    if (data.user) {
-      const { error: profileError } = await sb.from('profiles').upsert({
-        id: data.user.id,
-        first_name: firstName,
-        last_name: lastName || '',
-        email: email,
-        role: role,
-        organization: organization || null,
-        created_at: new Date().toISOString()
-      });
-      if (profileError) console.warn('Profile insert warning:', profileError.message);
-    }
-
-    return data;
-  },
-
   async loginWithGoogle() {
     const sb = await getSupabase();
     const { data, error } = await sb.auth.signInWithOAuth({

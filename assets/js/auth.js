@@ -102,31 +102,10 @@ async function registerUser({ email, password, firstName, lastName = '', role, o
   if (!user) throw new Error('Registrasi gagal: user tidak terbuat.');
 
   // ── Simpan profil ke tabel profiles ──
-  const profilePayload = {
-    id           : user.id,
-    email        : email,
-    first_name   : firstName,
-    last_name    : lastName,
-    role         : role,
-    organization : organization,
-    avatar_url   : null,
-    is_active    : true,
-    created_at   : new Date().toISOString(),
-    updated_at   : new Date().toISOString(),
-  };
+  // Profile otomatis dibuat oleh trigger Supabase
+  const profile = await getProfile(user.id);
 
-  const { data: profile, error: profileError } = await sb
-    .from('profiles')
-    .upsert(profilePayload)
-    .select()
-    .single();
-
-  if (profileError) {
-    // Profil gagal disimpan — log peringatan, jangan batalkan flow
-    console.warn('RESIK register: gagal simpan profil →', profileError.message);
-  }
-
-  return { user, profile: profile ?? profilePayload };
+  return { user, profile };
 }
 
 // ═══════════════════════════════════════════════════
