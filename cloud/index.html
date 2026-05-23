@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <!-- Satu file CSS eksternal untuk semua halaman -->
   <link rel="stylesheet" href="resik-main.css">
+  <link rel="stylesheet" href="resik-auth-additions.css">
   <script src="resik-supabase.js" defer></script>
   <title>RESIK — Circular Food Waste Ecosystem</title>
 </head>
@@ -31,7 +32,12 @@
       <span class="hb-line"></span>
       <span class="hb-line"></span>
     </button>
-    <a href="login.html" class="nav-btn">Masuk</a>
+    <div id="navAuthArea" aria-label="Autentikasi pengguna">
+      <a href="login.html" class="nav-btn rsik-nav-masuk">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="9" y2="12"/></svg>
+        Masuk
+      </a>
+    </div>
   </div>
 </nav>
 
@@ -723,41 +729,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 </script>
 
-<script>
-/* ── Drawer: tampilkan profil via RESIK_AUTH ── */
-document.addEventListener('DOMContentLoaded', async () => {
-  const profile = document.getElementById('drawerProfile');
-  const cta     = document.getElementById('drawerCta');
-  if (!profile || !cta) return;
-  try {
-    const user = await RESIK_AUTH.getUser();
-    if (user) {
-      const meta = user.user_metadata || {};
-      const name = meta.first_name || user.email.split('@')[0];
-      profile.style.display = 'flex';
-      cta.style.display = 'none';
-      const nameEl   = document.getElementById('drawerName');
-      const emailEl  = document.getElementById('drawerEmail');
-      const avatarEl = document.getElementById('drawerAvatar');
-      if (nameEl)  nameEl.textContent  = name;
-      if (emailEl) emailEl.textContent = user.email;
-      if (avatarEl && meta.avatar_url) {
-        avatarEl.innerHTML = '<img src="' + meta.avatar_url + '" alt="avatar">';
-      }
-      /* Klik profil → logout */
-      profile.style.cursor = 'pointer';
-      profile.title = 'Klik untuk keluar';
-      profile.addEventListener('click', async () => {
-        if (confirm('Keluar dari akun RESIK?')) {
-          await RESIK_AUTH.logout();
-          location.reload();
-        }
-      });
-    }
-  } catch(e) { /* belum login, drawer-cta tetap tampil */ }
-});
-</script>
 <script src="resik-shared.js"></script>
+<script src="resik-auth-navbar.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase.js"></script>
 </body>

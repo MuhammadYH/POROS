@@ -97,7 +97,7 @@
   </div>
   <h1 class="fu fu-2">Ada yang bisa<br>kami <em>bantu?</em></h1>
   <!-- FIX: "ReFood" diganti "RESIK" agar konsisten brand -->
-  <p class="hero-sub fu fu-3">Tim RESIK siap membantu 7 hari seminggu. Tanya RESIK AI atau temukan jawaban di FAQ.</p>
+  <p class="hero-sub fu fu-3">Tim RESIK siap membantu 7 hari seminggu. Tanya RESIK AI atau temukan jawaban tentang pengelolaan sampah pesantren di FAQ.</p>
 
   <!-- [RESIK AI] Label "RESIK AI — Online" di atas search bar -->
   <div class="ai-label-wrap fu fu-4">
@@ -193,7 +193,7 @@
     <div class="faq-tabs">
       <button class="faq-tab active" onclick="filterFAQ('semua', this)">Semua</button>
       <button class="faq-tab" onclick="filterFAQ('akun', this)">Akun &amp; Daftar</button>
-      <button class="faq-tab" onclick="filterFAQ('provider', this)">Food Provider</button>
+      <button class="faq-tab" onclick="filterFAQ('provider', this)">Penghasil Limbah</button>
       <button class="faq-tab" onclick="filterFAQ('pengelola', this)">Pengelola</button>
       <button class="faq-tab" onclick="filterFAQ('pickup', this)">Pickup &amp; Sistem</button>
       <button class="faq-tab" onclick="filterFAQ('keamanan', this)">Keamanan Pangan</button>
@@ -208,7 +208,7 @@
           <span class="faq-chevron">▾</span>
         </button>
         <div class="faq-answer">
-          Klik tombol "Daftar Gratis" di halaman utama, pilih peranmu (Food Provider atau Pengelola), lalu isi data dasar dan verifikasi email. Proses pendaftaran hanya membutuhkan 2–3 menit. Kamu juga bisa mendaftar menggunakan akun Google.
+          Klik tombol "Daftar Gratis" di halaman utama, pilih peranmu (Penghasil Limbah atau Pengelola), lalu isi data pesantren dan verifikasi email. Proses pendaftaran hanya membutuhkan 2–3 menit. Kamu juga bisa mendaftar menggunakan akun Google.
         </div>
       </div>
 
@@ -218,7 +218,7 @@
           <span class="faq-chevron">▾</span>
         </button>
         <div class="faq-answer">
-          Ya, RESIK sepenuhnya gratis untuk pengguna perorangan (rumah tangga) dan organisasi nirlaba. Untuk bisnis seperti restoran dan kantin, tersedia fitur lanjutan dengan paket Pro yang memiliki analitik lebih mendalam dan dukungan prioritas.
+          Ya, RESIK sepenuhnya gratis untuk pesantren kecil dan organisasi nirlaba. Untuk pesantren besar dan lembaga dengan volume limbah tinggi, tersedia fitur lanjutan dengan paket Pro yang memiliki analitik lebih mendalam dan dukungan prioritas.
         </div>
       </div>
 
@@ -239,7 +239,7 @@
           <span class="faq-chevron">▾</span>
         </button>
         <div class="faq-answer">
-          Kamu bisa mengupload makanan layak konsumsi (masih dalam kondisi baik), makanan mendekati expired namun masih aman, bahan mentah berlebih, hingga sisa organik untuk kompos. Setiap kategori memiliki alur distribusi yang berbeda agar tepat sasaran.
+          Kamu bisa mendaftarkan sisa makanan dapur (organik), sampah sayur dan buah dari kantin, ampas masak, hingga limbah organik lainnya untuk kompos. Setiap kategori memiliki alur distribusi yang berbeda agar tepat sasaran.
         </div>
       </div>
 
@@ -249,7 +249,7 @@
           <span class="faq-chevron">▾</span>
         </button>
         <div class="faq-answer">
-          Listing aktif selama 24 jam sejak diupload, atau hingga diklaim oleh pengelola — mana yang lebih dulu. Kamu bisa memperpanjang atau menghapus listing kapan saja dari dasbor. Listing yang melewati waktu expired otomatis dihapus oleh sistem.
+          Entri limbah aktif selama 24 jam sejak diinput, atau hingga diklaim oleh pengelola — mana yang lebih dulu. Kamu bisa memperpanjang atau menghapus listing kapan saja dari dasbor. Listing yang melewati waktu expired otomatis dihapus oleh sistem.
         </div>
       </div>
 
@@ -259,7 +259,7 @@
           <span class="faq-chevron">▾</span>
         </button>
         <div class="faq-answer">
-          Badge diberikan berdasarkan jumlah donasi sukses dan total kilogram makanan yang diselamatkan. Mulai dari Green Beginner (donasi pertama), Eco Helper (10+ donasi), hingga Waste Warrior (50+ donasi). Badge ditampilkan di profil publik dan dapat dibagikan ke media sosial.
+          Badge diberikan berdasarkan jumlah limbah yang berhasil diolah dan kontribusi lingkungan pesantren. Mulai dari Green Beginner (kontribusi pertama), Eco Helper (10+ kontribusi), hingga Waste Warrior (50+ kontribusi). Badge ditampilkan di profil pesantren dan dapat dibagikan.
         </div>
       </div>
 
@@ -270,7 +270,7 @@
           <span class="faq-chevron">▾</span>
         </button>
         <div class="faq-answer">
-          Buka peta food waste di dashboard, temukan listing terdekat, klik "Klaim", lalu tentukan jadwal pickup. Setelah diklaim, provider mendapat notifikasi dan kamu bisa memulai koordinasi. Sistem akan otomatis memandu langkah selanjutnya.
+          Buka peta limbah di dashboard, temukan entri terdekat, klik "Klaim", lalu tentukan jadwal pickup. Setelah diklaim, provider mendapat notifikasi dan kamu bisa memulai koordinasi. Sistem akan otomatis memandu langkah selanjutnya.
         </div>
       </div>
 
@@ -360,7 +360,7 @@
             <div class="form-select-wrap">
               <select class="form-select" id="inputPeran">
                 <option value="">Pilih...</option>
-                <option>Food Provider</option>
+                <option>Penghasil Limbah Pesantren</option>
                 <option>Pengelola</option>
                 <option>Belum Daftar</option>
                 <option>Lainnya</option>
@@ -375,7 +375,7 @@
             <select class="form-select" id="inputKategori">
               <option value="">Pilih kategori...</option>
               <option>Akun &amp; Login</option>
-              <option>Upload Food Waste</option>
+              <option>Input Data Limbah</option>
               <option>Sistem Pickup</option>
               <option>Verifikasi Pengelola</option>
               <option>Keamanan Pangan</option>
@@ -436,7 +436,7 @@
         <a href="index.html" class="footer-logo-wrap">
           <img src="image_0.png" alt="RESIK Logo" class="footer-logo-img">
         </a>
-        <p>Startup climate-tech yang fokus pada infrastruktur food waste cerdas dan operasional perkotaan yang berkelanjutan.</p>
+        <p>Startup climate-tech yang fokus pada infrastruktur pengelolaan sampah organik cerdas khusus untuk lingkungan pondok pesantren dan lembaga pendidikan Islam.</p>
       </div>
       <div class="footer-col fade-in" style="transition-delay:.1s">
         <h5>Produk</h5>
@@ -467,7 +467,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 RESIK — Rekayasa Efisiensi Sistem Industri Kepariwisataan. Seluruh hak dilindungi.</p>
+      <p>© 2026 RESIK — Rekayasa Ekosistem Sampah untuk Institusi dan Komunitas. Seluruh hak dilindungi.</p>
       <div class="social-links">
         <button class="social-btn" aria-label="Twitter/X">𝕏</button>
         <button class="social-btn" aria-label="LinkedIn">in</button>
